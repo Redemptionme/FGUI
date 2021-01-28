@@ -15,7 +15,7 @@ public class BuildAssetBundles
 
         AssetImporter.GetAtPath("Assets/FairyGUI/Examples/Resources/UI/BundleUsage_fui.bytes").assetBundleName = "fairygui-examples/bundleusage.ab";
         AssetImporter.GetAtPath("Assets/FairyGUI/Examples/Resources/UI/BundleUsage_atlas0.png").assetBundleName = "fairygui-examples/bundleusage.ab";
-
+        // todo hhl 参考打包
         BuildPipeline.BuildAssetBundles(Application.streamingAssetsPath, BuildAssetBundleOptions.None, BuildTarget.Android);
 #else
         for (int i = 0; i < 10; i++)
