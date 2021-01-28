@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="vvgx8voz">
+  <resources>
+    <component id="t6jc8" name="NormalButton.xml" path="/Com/" exported="true"/>
+    <component id="hpdk9" name="WindowFrame1.xml" path="/" exported="true"/>
+    <component id="hpdka" name="Wind.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" genCode="true"/>
+</packageDescription>

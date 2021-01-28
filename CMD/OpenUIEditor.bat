@@ -1,0 +1,1 @@
+start "D:\Program Files\FairyGUI-Editor/FairyGUI-Editor.exe" "E:\workplace\lrs\LrsJudgeTools/Client/LrsJudgeTools/FGUIProject/FGUIProject.fairy"

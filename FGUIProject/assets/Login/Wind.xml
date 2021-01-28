@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <displayList>
+    <component id="n0_pcht" name="frame" src="hpdk9" fileName="WindowFrame1.xml" xy="-119,-111"/>
+  </displayList>
+</component>

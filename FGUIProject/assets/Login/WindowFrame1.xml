@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,800" extention="Label" initName="frame">
+  <displayList>
+    <graph id="n0_hpdk" name="dragArea" xy="0,0" size="1024,20">
+      <relation target="" sidePair="width-width"/>
+    </graph>
+    <graph id="n1_hpdk" name="contentArea" xy="0,21" size="1024,780">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n2_hpdk" name="n2" xy="175,115" size="674,637" type="rect" fillColor="#ff33cc00"/>
+    <component id="n3_hpdk" name="closeButton" src="t6jc8" fileName="Com/NormalButton.xml" xy="762,121"/>
+  </displayList>
+</component>

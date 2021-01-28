@@ -1,0 +1,30 @@
+{
+  "libview.firstColumnWidth": 283,
+  "libview.iconScale": 0,
+  "doc.openedDocs": [
+    "ui://vvgx8vozt6jc8",
+    "ui://fzep7j0vj47v0"
+  ],
+  "test.device": "iPad",
+  "canvasColor": 10066329,
+  "auxline2": true,
+  "doc.activeDoc": "ui://fzep7j0vj47v0",
+  "libview.twoColumn": false,
+  "libview.expandedNodes": [
+    "fzep7j0v",
+    "/",
+    "fzep7j0v",
+    "/Com/",
+    "vvgx8voz",
+    "/",
+    "vvgx8voz",
+    "/Com/"
+  ],
+  "auxline1": true,
+  "snapToGrid": true,
+  "test.orientation": "landscape",
+  "backgroundColor": 6710886,
+  "libview.currentGroup": "",
+  "gridSize": 30,
+  "gridColor": 80
+}
