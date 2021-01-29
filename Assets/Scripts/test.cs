@@ -10,7 +10,10 @@ public class test : MonoBehaviour
 {
     private void Awake()
     {
-        UIPackage.AddPackage("Assets/Resources/GameRes/UI/Login");
+        //Resources.Load("Assets/Resources/GameRes/UI/Common_fui.bytes");
+        //Resources.Load("Assets/Resources/GameRes/UI/Login_fui.bytes");
+        UIPackage.AddPackage("GameRes/UI/Login");
+        //UIPackage.AddPackage("Assets/Resources/GameRes/UI/Login");
         LoginBinder.BindAll();
     }
 
