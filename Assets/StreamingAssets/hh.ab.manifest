@@ -1,16 +1,17 @@
 ManifestFileVersion: 0
-CRC: 920329664
+CRC: 91799298
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d1706dc103c23834d8d62f35a005333a
+    Hash: cec27cc816c8293909578f023824f70b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 525b72fdacf3aef7d65f355ad8f17a96
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
 HashAppended: 0
 ClassTypes:
-- Class: 28
+- Class: 49
   Script: {instanceID: 0}
 Assets:
-- Assets/FairyGUI/Examples/Resources/Icons/i6.png
+- Assets/GameRes/UI/Login_fui.bytes
+- Assets/GameRes/UI/Common_fui.bytes
 Dependencies: []
