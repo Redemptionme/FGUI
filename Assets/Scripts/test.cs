@@ -10,15 +10,9 @@ using UnityEngine.Networking;
 
 public class test : MonoBehaviour
 {
+    private bool m_bTest = false;
     private void Awake()
     {
-        //以下是成功的
-        // assetbundle方式
-        
-        // ios "file://{Application.streamingAssetsPath}"
-        string str = Path.Combine(Application.streamingAssetsPath, "hh.ab");
-        
-        
         var myLoadedAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "hl.ab"));
         if (myLoadedAssetBundle == null) {
             Debug.Log("Failed to load AssetBundle!");
@@ -26,25 +20,45 @@ public class test : MonoBehaviour
         }
         var prefab = myLoadedAssetBundle.LoadAsset<GameObject>("Cube");
         Instantiate(prefab);
-        
-        /*
-        AssetBundle bundle = AssetBundle.LoadFromFile(str);
-        UIPackage.AddPackage(bundle);*/
-        // Resouce加载方式
-        //UIPackage.AddPackage("Assets/Resources/GameRes/UI/Login");
-        UIPackage.AddPackage("GameRes/UI/Login");
-        // 编辑器加载模式
-        // UIPackage.AddPackage("Assets/GameRes/UI/Login");
-        // LoginBinder.BindAll();
-        // var ui = new BaseWindow();
-        // Debug.Log("asdf");
-        // ui.Show();
-        
-        //StartCoroutine(LoadUIPackage());
-        
-        LoginBinder.BindAll();
+
+
+        //LoadEditorRes();
+        //LoadResource();
+        LoadABResSync();
+        //LoadABResASync();
+    }
+
+    // 编辑器加载
+    private void LoadEditorRes()
+    {
+        UIPackage.AddPackage("Assets/GameRes/UI/Login");
     }
     
+    // resource加载
+    private void LoadResource()
+    {
+        UIPackage.AddPackage("GameRes/UI/Login");
+    }
+    
+    // ab包同步加载
+    private void LoadABResSync()
+    {
+        string url = Application.streamingAssetsPath.Replace("\\", "/") + "/hhl/hh.ab";
+        // 疑惑不需要加？
+        //if (Application.platform != RuntimePlatform.Android)
+        //  url = "file:///" + url;
+        
+        AssetBundle bundle = AssetBundle.LoadFromFile(url);
+        UIPackage.AddPackage(bundle,bundle,"assets/gameres/ui/Login_fui.bytes");
+    }
+    
+    // ab包异步加载
+    private void LoadABResASync()
+    {
+        StartCoroutine(LoadUIPackage());
+    }
+
+
     IEnumerator LoadUIPackage()
     {
         string url = Application.streamingAssetsPath.Replace("\\", "/") + "/hhl/hh.ab";
@@ -75,13 +89,8 @@ public class test : MonoBehaviour
                 Debug.LogWarning("Run Window->Build FairyGUI example Bundles first.");
                 yield return 0;
             }
-            UIPackage.AddPackage(bundle);
-            LoginBinder.BindAll();
-            var ui = new BaseWindow();
-            Debug.Log("asdf");
-            ui.Show();
-           
-            
+            //UIPackage.AddPackage(bundle);
+            UIPackage.AddPackage(bundle,bundle,"assets/gameres/ui/Login_fui.bytes"); 
         }
         else
             Debug.LogError(www.error);
@@ -92,14 +101,19 @@ public class test : MonoBehaviour
     {
         
         
-        var ui = new BaseWindow();
-        Debug.Log("asdf");
-        ui.Show();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!m_bTest)
+        {
+            LoginBinder.BindAll();
+            var ui = new BaseWindow();
+            Debug.Log("asdf");
+            ui.Show();
+            m_bTest = true;
+        }   
     }
 }

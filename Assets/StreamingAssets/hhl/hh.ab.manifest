@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 4292327287
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2387b36723558e9d7b2efc89ea3570de
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/GameRes/UI/Login_fui.bytes
+- Assets/GameRes/UI/Common_fui.bytes
+Dependencies: []
