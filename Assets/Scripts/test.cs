@@ -32,7 +32,7 @@ public class test : MonoBehaviour
         UIPackage.AddPackage(bundle);*/
         // Resouce加载方式
         //UIPackage.AddPackage("Assets/Resources/GameRes/UI/Login");
-        UIPackage.AddPackage("GameRes1/UI/Login");
+        UIPackage.AddPackage("GameRes/UI/Login");
         // 编辑器加载模式
         // UIPackage.AddPackage("Assets/GameRes/UI/Login");
         // LoginBinder.BindAll();
